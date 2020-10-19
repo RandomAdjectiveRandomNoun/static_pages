@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="mobile-web-app-capable" content="yes">
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		#player {
+			display: none;
+		}
+		#wrapper {
+			display: table;
+			width: 100%;
+		}
+		#wrapper > div {
+			display: table-row-group;
+		}
+		.station {
+			font-family: sans-serif;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			width: 50%;
+			height: 3em;
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function play(url) {
+			var player = document.getElementById("player");
+			player.src = url;
+			player.play();
+		}
+	</script>
+</head>
+<body>
+<audio id="player" src=""></audio>
+<div id="wrapper">
+	<div>
+		<div class="station" onclick="play('https://liveradio.omroepwest.nl/')" style="color: #de0169; background: #086ab3;">Radio West</div>
+		<div class="station" onclick="play('https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3')" style="background: #ED3624; color: white">Qmusic</div>
+	</div>
+	<div>
+		<div class="station" onclick="play('https://19993.live.streamtheworld.com/SKYRADIO.mp3')" style="color: #C9FF01; background: #007CDF">Sky Radio</div>
+		<div class="station" onclick="play('https://20873.live.streamtheworld.com/VERONICA.mp3')" style="color: #0089ff">Veronica</div>
+	</div>
+	<div>
+		<div class="station" onclick="play('https://21253.live.streamtheworld.com/RADIO538.mp3')" style="color: #46C31D;">Radio 538</div>
+		<div class="station" onclick="play('https://icecast.omroep.nl/3fm-bb-mp3')" style="background: black; color: #35d327">Radio 3FM</div>
+	</div>
+	<div>
+		<div class="station" onclick="play('https://stream.slam.nl/slam_mp3')" style="background: #e70067; color: #33b6e8">Slam!</div>
+		<div class="station" onclick="play('https://stream.100p.nl/100pctnl.mp3')" style="background: #ef7d00">100% NL</div>
+	</div>
+	<!--<div>
+		<div class="station" onclick="play('')"></div>
+		<div class="station" onclick="play('')"></div>
+	</div>-->
+</div>
+</body>
+</html>
